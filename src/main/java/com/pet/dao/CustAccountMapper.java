@@ -11,5 +11,5 @@ public interface CustAccountMapper {
 
     List<Map> selectAccountItem(int accountId);
 
-    List<Account> selectMyContacts(int accountId);
+//    List<Account> selectMyContacts(int accountId);
 }

@@ -46,10 +46,10 @@
         <table tableName="account" domainObjectName="Account">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="dog" domainObjectName="Dog">
+        <table tableName="auth" domainObjectName="Auth">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="contacts" domainObjectName="Contacts">
+        <table tableName="world_message" domainObjectName="WorldMessage">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>

@@ -8,21 +8,4 @@
         FROM Account a
         WHERE a.id = #{accountId}
     </select>
-
-
-    <select id="selectMyContacts" parameterType="int" resultType="com.pet.bean.Account">
-        SELECT
-            a.*
-        FROM
-            account a
-        WHERE
-	        a.id IN (
-                SELECT
-                    c.user_b_id
-                FROM
-                    contacts c
-                WHERE
-                    c.user_a_id = #{accountId}
-            )
-    </select>
 </mapper>

@@ -45,7 +45,7 @@ public class AccountController extends AbsController {
     @ResponseBody
     public Object addAccount(@RequestParam Map param) {
         try {
-            accountService.addAccount(param);
+            Account account = accountService.addAccount(param);
             return ajax();
         } catch (RuntimeException e) {
             log.error(e.getMessage());
@@ -59,11 +59,29 @@ public class AccountController extends AbsController {
     /**
      * 通过id查询用户
      * */
-    @GetMapping("select/account")
+    @GetMapping("select/account_id")
     @ResponseBody
     public Object selectAccountById(@RequestParam Map param) {
         try {
             Account account = accountService.getAccountById(param);
+            return ajax(account);
+        } catch (RuntimeException e) {
+            log.error(e.getMessage());
+            return ajax(e);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return ajax(e);
+        }
+    }
+
+    /**
+     * 通过account_name查询用户
+     * */
+    @GetMapping("select/account_name")
+    @ResponseBody
+    public Object selectAccountByAccountName(@RequestParam Map param) {
+        try {
+            Account account = accountService.getAccountByAccountName(param);
             return ajax(account);
         } catch (RuntimeException e) {
             log.error(e.getMessage());

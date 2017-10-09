@@ -29,7 +29,7 @@ host: http://localhost:8080
 spring:
   profiles: develop
   datasource:
-    url: jdbc:mysql://localhost/petcircle?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://localhost/look_world?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
     password: 123456
     initialSize: 5
